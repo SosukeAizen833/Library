@@ -2,7 +2,7 @@
 let books = new Array();
 const body = document.body
 const content  = document.querySelector('.content')
-function book(title,author,status){
+function Book(title,author,status){
     this.title = title      
     this.author = author
     this.status = status  //status is boolean//link to dom
@@ -50,5 +50,13 @@ function addBook(title,author,status){
     createCard(b)
 }
 
-const ad_btn = document.querySelector('#add')
+const save_btn = document.querySelector('#save')
+
+save_btn.addEventListener('click',()=>{
+    let author = document.getElementById('author_name').value
+    let title = document.getElementById('book_name').value
+    let status = document.getElementById('status').checked
+    const book = new Book(author,title,status)
+    createCard(book)
+})
 
