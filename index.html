@@ -17,46 +17,46 @@
 <body>
     <div class="header">
         <h1>Library</h1>
-        <h3>Created with pain</h3>
+        <h3>Created with Love</h3>
     </div>
     <div class="content">
          <button type="button" id="add" data-toggle="modal" data-target="#new-book-modal">
             <i class="fas fa-plus-circle plus"></i>
-         </button>
-         
-    </div>
-     <div class="modal fade" id="new-book-modal" tabindex="-1" role='dialog' aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <div class="modal-title">Create A New Book</div>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form class="new-book-form mb-2">
-                        <div class="form-group">
-                            <label for="book_name">Title</label>
-                            <input type="text" class="form-control" id="book_name">
-                        </div>
-                        <div class="form-group">
-                            <label for="author_name">Author</label>
-                            <input type="text" class="form-control" id="author_name">
-                        </div>
-                        <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input" id="status">
-                            <label class="form-check-label" for="status">Read</label>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" id="save">Save</button>
-                    <button type="button" class="btn btn-primary" id="cancel">Cancel</button>
+         </button>  
+         <div class="modal fade" id="new-book-modal" tabindex="-1" role='dialog' aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="modal-title">Create A New Book</div>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="new-book-form mb-2">
+                            <div class="form-group">
+                                <label for="book_name">Title</label>
+                                <input type="text" class="form-control" id="book_name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="author_name">Author</label>
+                                <input type="text" class="form-control" id="author_name" required>
+                            </div>
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="status">
+                                <label class="form-check-label" for="status">Read</label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" id="save">Save</button>
+                        <button type="button" class="btn btn-primary" id="cancel">Cancel</button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div> 
+        </div> 
+    </div>
+    
     
     
 </body>

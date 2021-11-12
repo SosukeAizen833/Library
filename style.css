@@ -1,7 +1,7 @@
 .header{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     background-color: rgb(34,193,195);
     background: linear-gradient(90deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
     padding: 5px 15px
@@ -9,12 +9,18 @@
 
 .header h1{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-left: auto;
+
 }
 .header h3{
     font-family: cursive;
+    margin-left: auto;
 }
 .content{
     padding: 30px;
+    display: flex;
+    gap:40px;
+    flex-wrap: wrap;
 }
 
 .plus{
@@ -25,15 +31,34 @@
 
 .plus:hover{
     font-size: 70px;
+    animation: rotate 1s
+}
+@keyframes rotate {
+    0%{
+
+    }
+    100%{
+        transform: rotate(90deg);
+    }
 }
 
 #add{
     padding: 0px;
-    border: 0px;
+    border: none;
     border-radius: 50%;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10;
+    background-color: white;
+    transform: scaleX(1.2) scaleY(1.2);
 }
 
 .new-book-form{
     width: 100%;
     height: auto;
+}
+
+.card-color{
+    background-color: rgba(231, 212, 184, 0.959);
 }
