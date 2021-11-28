@@ -11,6 +11,7 @@ body{
 
 .header h1{
     font-family: "Lobster", Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    flex-wrap: wrap;
     position: relative;
     left: 100px;
     margin-left: auto;
