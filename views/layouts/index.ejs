@@ -62,11 +62,13 @@
         <% books.forEach(book => { %>
             <div class="card book-card">
                 <div class="card-body" style="display: flex; flex-direction:column; justify-content:space-between; align-items:center">
-                    <h2 class="card-title"><%=book.name %></h5>
-                    <h3 class="card-subtitle"><%=book.author%></h6>
+                    <h2 class="card-title"><%=book.name %></h2>
+                    <h3 class="card-subtitle"><%=book.author%></h3>
                     <div class="card-buttons">
                         <button type="submit" class="btn btn-primary"><%= book.status ? "Read" : "Not Read"  %></button>
-                        <a href="" class="btn btn-danger">Delete</a>
+                        <form action="/library/<%=book.id%>?_method=DELETE" method="POST">
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
                     </div>
                 </div>
             </div>
