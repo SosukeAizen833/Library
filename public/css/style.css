@@ -73,6 +73,12 @@ body{
     transition-timing-function:linear;
 }
 
+.card-buttons{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
 .book-card:hover{
     width: 270px;
     height: 270px;
