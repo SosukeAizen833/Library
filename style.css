@@ -68,9 +68,10 @@ body{
 .book-card{
     height: 250px; 
     width:250px;
-    /* background-color: rgb(189, 129, 221) !important; */
+    background-color: #f0f1bd !important;
     transition: width 0.2s, height 0.2s;
     transition-timing-function:linear;
+    resize: vertical !important;
 }
 
 .book-card:hover{
