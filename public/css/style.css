@@ -13,14 +13,14 @@ body{
 .header h1{
     font-family: "Lobster", Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     flex-wrap: wrap;
-    position: relative;
-    left: 100px;
-    margin-left: auto;
 }
 
-.header h3{
+.footer{
     font-family: cursive;
-    margin-left: auto;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
 }
 .content{
     padding: 50px;
