@@ -19,6 +19,7 @@ app.use((req, res, next) =>{
 app.get('/', (req,res)=>{
     res.redirect('/library')
 })
+
 app.use('/library', libraryRouter)
 
 const PORT = process.env.PORT || 3000;

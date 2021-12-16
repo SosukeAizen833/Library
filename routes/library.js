@@ -9,7 +9,7 @@ mongoose.connect('mongodb+srv://Aizen833:ScarTissue1999@hogyoku.kmr9q.mongodb.ne
 }).then(()=>{
     console.log("Successfully connected Atlas Remote Cluster")
 }).catch(err =>{
-    console.log("Error connecting to Atlas Remote Cluster")
+    console.error(err)
 })
 
 router.get('/',  async (req, res) =>{
@@ -17,8 +17,12 @@ router.get('/',  async (req, res) =>{
    res.render('layouts/index',{books: books})
 })
 
+router.get('/json',async (req, res) =>{
+    let books = await Book.find();
+    res.json(books);
+})
 router.post('/',async (req,res)=>{
-    console.log(req.body)
+    console.log(req.body.book_name)
     let book = new Book(
         {
             name: req.body.book_name,
@@ -26,20 +30,17 @@ router.post('/',async (req,res)=>{
             status: req.body.status == "on" ? true : false
         }
     )
-    
     try{
         await book.save()
     }catch(err){
         console.log(err)
     }
-    let books = await Book.find()
-    res.render('layouts/index',{ books: books })
+    res.redirect('/')
 })
 
 router.delete('/:id', async (req, res)=>{
     await Book.findByIdAndDelete(req.params.id)
-    let books = await Book.find();
-    res.render('layouts/index',{ books: books})
+    res.redirect('/')
 })
 
 module.exports = router;

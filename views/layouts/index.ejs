@@ -16,7 +16,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/6cf90903e7.js" crossorigin="anonymous"></script>
-    <script src="/javascript/script.js" defer></script>
+    <!-- <script src="/javascript/script.js"></script> -->
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -50,26 +50,26 @@
                             <div class="form-group form-check mt-4">
                                 <label class="form-check-label" for="status">Read</label>
                                 <input type="checkbox" class="form-check-input" name="status" id="status">
-                                
                             </div>
                             <button type="submit" class="btn btn-primary" id="save">Save</button>
                         </form>
                     </div>
-                    
                 </div>
             </div>
         </div>
         <% books.forEach(book => { %>
             <div class="card book-card">
+                <div class="card-header">
+                    <div style="float: right">
+                        <form action="/library/<%=book.id%>?_method=DELETE" method="POST">
+                            <button type="submit" class="btn-close" aria-label="Close"></button>
+                        </form>
+                    </div>
+                </div>
                 <div class="card-body" style="display: flex; flex-direction:column; justify-content:space-between; align-items:center">
                     <h2 class="card-title"><%=book.name %></h2>
                     <h3 class="card-subtitle"><%=book.author%></h3>
-                    <div class="card-buttons">
-                        <button type="submit" class="btn btn-primary"><%= book.status ? "Read" : "Not Read"  %></button>
-                        <form action="/library/<%=book.id%>?_method=DELETE" method="POST">
-                            <button type="submit" class="btn btn-danger">Delete</button>
-                        </form>
-                    </div>
+                    <a class="btn btn-primary" style="width:100%"><%= book.status ? "Read" : "Not Read"  %></a>
                 </div>
             </div>
         <% }) %>
