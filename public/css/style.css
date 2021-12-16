@@ -26,7 +26,7 @@ body{
     padding: 50px;
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 50px;
 }
 
 .plus{
@@ -38,7 +38,7 @@ body{
 
 .plus:hover{
     font-size: 70px;
-    animation: rotate 0.5s
+    animation: rotate 0.5s;
 }
 
 @keyframes rotate {
@@ -67,9 +67,9 @@ body{
 }
 
 .book-card{
-    height: 250px; 
-    width:250px;
-    background-color: #f0f1bd !important;
+    height: 300px; 
+    width:300px;
+    background-color: #fdfdda !important;
     transition: width 0.2s, height 0.2s;
     transition-timing-function:linear;
     resize: vertical !important;
@@ -82,7 +82,8 @@ body{
 }
 
 .book-card:hover{
-    width: 270px;
-    height: 270px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.272);
+    height: 310px; 
+    width:310px;
+    box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.272);
+    position: relative;
 }
