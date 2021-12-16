@@ -1,0 +1,87 @@
+body{
+    background-color: rgb(60, 157, 226);
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 15px
+}
+
+.header h1{
+    font-family: "Lobster", Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    flex-wrap: wrap;
+    position: relative;
+    left: 100px;
+    margin-left: auto;
+}
+
+.header h3{
+    font-family: cursive;
+    margin-left: auto;
+}
+.content{
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.plus{
+    font-size: 50px;
+    transition: font-size 0.2s;
+    transition-timing-function: ease-in;
+    border: 0px;
+}
+
+.plus:hover{
+    font-size: 70px;
+    animation: rotate 0.5s
+}
+
+@keyframes rotate {
+    0%{
+
+    }
+    100%{
+        transform: rotate(90deg);
+    }
+}
+
+#add{
+    padding: 0px;
+    border: none;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10;
+    background-color: white;
+}
+
+.new-book-form{
+    width: 100%;
+    height: auto;
+}
+
+.book-card{
+    height: 250px; 
+    width:250px;
+    background-color: #f0f1bd !important;
+    transition: width 0.2s, height 0.2s;
+    transition-timing-function:linear;
+    resize: vertical !important;
+}
+
+.card-buttons{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.book-card:hover{
+    width: 270px;
+    height: 270px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.272);
+}
