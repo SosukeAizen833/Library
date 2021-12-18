@@ -69,9 +69,8 @@ body{
 .book-card{
     height: 300px; 
     width:300px;
-    background-color: #fdfdda !important;
-    transition: width 0.2s, height 0.2s;
-    transition-timing-function:linear;
+    background-color: white !important;
+    transition: 0.3s all ease-in-out;
     resize: vertical !important;
 }
 
@@ -82,8 +81,6 @@ body{
 }
 
 .book-card:hover{
-    height: 310px; 
-    width:310px;
     box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.272);
-    position: relative;
+    margin-top: -10px;
 }
