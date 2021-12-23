@@ -1,86 +1,85 @@
-body{
-    background-color: rgb(60, 157, 226);
+body {
+  background-color: rgb(60, 157, 226);
 }
 
-.header{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 5px 15px
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 5px 15px;
 }
 
-.header h1{
-    font-family: "Lobster", Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    flex-wrap: wrap;
+.header h1 {
+  font-family: "Lobster", Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  flex-wrap: wrap;
 }
 
-.footer{
-    font-family: cursive;
-    position: relative;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
+.footer {
+  font-family: cursive;
+  position: relative;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
 }
-.content{
-    padding: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
-}
-
-.plus{
-    font-size: 50px;
-    transition: font-size 0.2s;
-    transition-timing-function: ease-in;
-    border: 0px;
+.content {
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
 }
 
-.plus:hover{
-    font-size: 70px;
-    animation: rotate 0.5s;
+.plus {
+  font-size: 50px;
+  transition: font-size 0.2s;
+  transition-timing-function: ease-in;
+  border: 0px;
+}
+
+.plus:hover {
+  font-size: 70px;
+  animation: rotate 0.5s;
 }
 
 @keyframes rotate {
-    0%{
-
-    }
-    100%{
-        transform: rotate(90deg);
-    }
+  0% {
+  }
+  100% {
+    transform: rotate(90deg);
+  }
 }
 
-#add{
-    padding: 0px;
-    border: none;
-    border-radius: 50%;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 10;
-    background-color: white;
+#add {
+  padding: 0px;
+  border: none;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+  background-color: white;
 }
 
-.new-book-form{
-    width: 100%;
-    height: auto;
+.new-book-form {
+  width: 100%;
+  height: auto;
 }
 
-.book-card{
-    height: 300px; 
-    width:300px;
-    background-color: white !important;
-    transition: 0.3s all ease-in-out;
-    resize: vertical !important;
+.book-card {
+  height: 300px;
+  width: 300px;
+  background-color: white !important;
+  transition: 0.3s all ease-in-out;
+  resize: vertical !important;
 }
 
-.card-buttons{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+.card-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
-.book-card:hover{
-    box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.272);
-    margin-top: -10px;
+.book-card:hover {
+  box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.272);
+  margin-top: -10px;
 }
