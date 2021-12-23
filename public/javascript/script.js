@@ -1,9 +1,7 @@
-
 const body = document.body;
 const content = document.querySelector(".content");
 
-
-function createCard(book) {
+function createCard(book,bookid) {
   const card = document.createElement("div");
   card.classList.add("card");
   card.classList.add("book-card");
@@ -62,7 +60,6 @@ function createCard(book) {
   card_body.appendChild(remove_bttn);
   remove_bttn.textContent = "DELETE";
   remove_bttn.style.cssText = "width:100%";
-  
 }
 
 const save_btn = document.querySelector("#save");
