@@ -59,9 +59,11 @@
         <% books.forEach(book => { %>
             <div class="card book-card">
                 <div class="card-header">
-                    <div style="float: right">
+                    <div style="display:flex;justify-content: flex-end;gap:5px; align-items:center">
+                        <a href="/library/edit/<%=book.id%>"><button type="submit" style="border: 0px; background-color:inherit;"><i class="fa fa-cog" style="font-size:18px"></i></button></a>
+                
                         <form action="/library/<%=book.id%>?_method=DELETE" method="POST">
-                            <button type="submit" class="btn-close" aria-label="Close"></button>
+                            <button type="submit" style="border: 0px; background-color:inherit;"><i class="fas fa-trash-alt" style="font-size:18px"></i></button>
                         </form>
                     </div>
                 </div>

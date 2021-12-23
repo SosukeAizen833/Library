@@ -17,6 +17,25 @@ router.get('/',  async (req, res) =>{
    res.render('layouts/index',{books: books})
 })
 
+router.put('/edit/:id',async (req, res) =>{
+    try{
+        let upBook = await Book.findOneAndUpdate({_id:req.params.id},{
+            name: req.body.book_name,
+            author: req.body.author_name,
+            status: req.body.status === "on" ? true : false
+        },{new: true})
+        console.log(upBook)
+        res.redirect('/')
+    }catch(err){
+        console.error(err)
+
+    }
+})
+router.get('/edit/:id' ,async (req, res)=>{
+    const book = await Book.findById(req.params.id)
+    console.log(book)
+    res.render('layouts/edit',{book: book})
+})
 router.get('/json',async (req, res) =>{
     let books = await Book.find();
     res.json(books);
