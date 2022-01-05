@@ -78,7 +78,7 @@ body {
 }
 
 .book-card {
-  height: 300px !important;
+  height: 250px !important;
   width: 300px !important;
   background-color: white !important;
   transition: 0.3s all ease-in-out;
