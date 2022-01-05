@@ -58,8 +58,11 @@ router.post('/',async (req,res)=>{
 })
 
 router.delete('/:id', async (req, res)=>{
-    await Book.findByIdAndDelete(req.params.id)
-    res.redirect('/')
+    try{
+        await Book.findByIdAndDelete(req.params.id)
+    }catch(e){
+        console.log("Object not found")
+    }
 })
 
 module.exports = router;
