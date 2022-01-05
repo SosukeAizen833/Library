@@ -78,8 +78,8 @@ body {
 }
 
 .book-card {
-  height: 250px !important;
-  width: 300px !important;
+  height: 300px !important;
+  width: 270px !important;
   background-color: white !important;
   transition: 0.3s all ease-in-out;
   overflow: auto;
