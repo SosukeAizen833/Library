@@ -1,5 +1,9 @@
 body {
-  background-color: rgb(60, 157, 226);
+  background-image: url("../images/lake-g8b1894102_1920.jpg");
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
 }
 
 .header {
@@ -23,11 +27,13 @@ body {
   justify-content: center;
 }
 .content {
+  width: 95%;
   margin-top: 30px;
-  padding: 50px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  row-gap: 30px;
 }
 
 @media only screen and (max-width: 480px) {
@@ -79,7 +85,7 @@ body {
 
 .book-card {
   height: 300px !important;
-  width: 270px !important;
+  width: 300px !important;
   background-color: white !important;
   transition: 0.3s all ease-in-out;
   overflow: auto;

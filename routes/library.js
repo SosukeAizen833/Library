@@ -62,6 +62,8 @@ router.delete('/:id', async (req, res)=>{
         await Book.findByIdAndDelete(req.params.id)
     }catch(e){
         console.log("Object not found")
+    }finally{
+        res.redirect('/')
     }
 })
 
